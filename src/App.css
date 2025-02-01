@@ -1,42 +1,49 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+:root{
+  --prim_blue: rgb(23,37,84);
+  --btn_blue:rgb(59,130,246);
+  --input_blue:rgb(191, 214, 252);
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+
+.inputBounds{
+  width: 100%;
+  margin: auto;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: aqua; */
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.inputStyles{
+  outline: none;
+  width: 100%;
+  padding: 2px;
+  margin: 2px;
+  border-radius: 5px;
+  /* background-color: var(--input_blue); */
+  box-shadow:5px 2px 2px    var(--prim_blue) ;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.inputStyles:focus{
+  background-color:  var(--input_blue) ;
+  box-shadow:5px 2px 2px    var(--prim_blue) ;
+  padding: 7px;
+}
+.labelStyles{
+  font-weight: bold;
+  text-align: left;
+  /* background-color: beige; */
+  width: 100%;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.formBtn{
+  margin-top: 10px;
+  padding: 10px;
+  background-color:  var(--prim_blue);
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+.formBtn:hover{
+  background-color: var(--btn_blue);
+  color: rgb(13, 12, 12);
 }
