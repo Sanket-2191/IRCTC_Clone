@@ -1,0 +1,15 @@
+
+.trainInfoMain{
+    height: fit-content;
+    width: 90%;
+    margin: auto;
+    margin-top: 4rem;
+    /* background-color: aquamarine; */
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: start;
+
+}
+
