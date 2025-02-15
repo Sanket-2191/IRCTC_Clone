@@ -1,7 +1,7 @@
 
-.trainInfoMain{
+.infoCard{ /* styles for info to be shown on a card */
     height: fit-content;
-    width: 90%;
+    width: 70%;
     margin: auto;
     margin-top: 4rem;
     /* background-color: aquamarine; */
@@ -9,7 +9,7 @@
     flex-direction: column;
 
     justify-content: center;
-    align-items: start;
+    align-items: stretch;
 
 }
 

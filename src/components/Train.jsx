@@ -4,7 +4,7 @@ import { Button } from '@material-tailwind/react';
 const Train = ({ info }) => {
     return (
         <div className='w-full m-2 border border-[rgb(23,37,84)] h-[22vh] '>
-            <div className='font-bold h-[25%] bg-[#2563eb] text-white p-3 flex items-center' > {info.trainName}</div>
+            <div className='font-bold h-[25%] bg-[rgb(23,37,84)] text-white p-3 flex items-center' > {info.trainName}</div>
             <div className='flex justify-between items-center'>
                 <div className='text-center m-2 '>
                     {info.departureTime} <span className='font-bold mr-1'>|</span>{info.departureStation}
@@ -17,7 +17,7 @@ const Train = ({ info }) => {
             </div>
             <Button
                 ripple={false}
-                className=' bg-[#2563eb] text-white shadow-none hover:scale-105 
+                className=' bg-[rgb(23,37,84)] text-white shadow-none hover:scale-105 
                  hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100 font-serif'>
                 {info.price}/- Rs
             </Button>

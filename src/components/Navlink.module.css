@@ -1,0 +1,9 @@
+.activeStyle{
+
+  color: rgb(190, 10, 235);
+  background-color: #010102;
+  border-color: #1111ef;
+  /* margin: 5px; */
+  height: 100%;
+  width: 100%;
+}

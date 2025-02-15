@@ -25,7 +25,7 @@
 }
 .homeSearchDiv:hover {
   border-color: #2563eb; /* hover:border-blue-600 */
-  box-shadow: 0px 0px 50px var(--border_blue);
+  box-shadow: 0px 0px 20px var(--border_blue);
 }
 
 .inputBounds{
@@ -65,7 +65,7 @@
   border-radius: 8px;
   margin-top: 10px;
   margin-left: 3px;
-  border: 1px solid transparent;
+  border: 1px solid ;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;

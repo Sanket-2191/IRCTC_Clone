@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import styles from './trainInfo.module.css'
 import { allTrainData } from '../assets/allTrains.jsx';
-import Train from './Train.jsx';
 import { useTrainContext } from '../contexts/Traincontext.jsx';
+import Train from './train.jsx';
 
 const TrainInfo = (props) => {
 
@@ -35,7 +35,7 @@ const TrainInfo = (props) => {
 
 
     return (
-        <div className={styles.trainInfoMain}>
+        <div className={styles.infoCard}>
 
             <span className='font-bold'> Train Info </span>
 
