@@ -5,6 +5,7 @@ import { useTrainContext } from '../contexts/Traincontext.jsx';
 import Login from './Login.jsx';
 import Register from './Register.jsx';
 import { Typography } from '@material-tailwind/react';
+import useForm from '../customHooks/useForm.js';
 
 const Home = () => {
 
@@ -14,12 +15,21 @@ const Home = () => {
 
     const { trainDataVisiblity, setTrainDataVisiblity } = useTrainContext();
 
+    const { formData, handleFormChange, clearInputs } = useForm({ pickUp: '', destination: '', date: new Date() })
+
+    const { pickUp, destination, date } = formData;
+
 
     const renderTraindata = (e) => {
         e.preventDefault();
         setTrainDataVisiblity(!trainDataVisiblity);
         console.log(trainDataVisiblity);
 
+    }
+
+    const handleClear = () => {
+        setTrainDataVisiblity(false);
+        clearInputs();
     }
     return (
         <>
@@ -33,19 +43,31 @@ const Home = () => {
                 <form action="" onSubmit={renderTraindata} className=' w-[80%] h-full '>
 
                     <div className=' inputBounds '>
-                        <label htmlFor="from" className='labelStyles'>From</label>
-                        <input id='from' type="text" required className='  inputStyles' placeholder='Enter the Pickup Station' />
+                        <label htmlFor="pickUp" className='labelStyles'>From</label>
+                        <input id='pickUp' type="text"
+                            value={pickUp}
+                            onChange={handleFormChange}
+                            required className='  inputStyles' placeholder='Enter the Pickup Station' />
                     </div>
                     <div className=' inputBounds '>
-                        <label htmlFor="toDestination" className='labelStyles'>To</label>
-                        <input id='toDestination' required type="text" className='  inputStyles' placeholder='Enter the Drop Station' />
+                        <label htmlFor="destination" className='labelStyles'>To</label>
+                        <input id='destination' required
+                            value={destination}
+                            onChange={handleFormChange}
+                            type="text" className='  inputStyles' placeholder='Enter the Drop Station' />
                     </div>
                     <div className='inputBounds '>
-                        <label htmlFor="dateOfTravel" className='labelStyles'> Date</label>
-                        <input id='dateOfTravel' required type="date" className='  inputStyles' placeholder='' />
+                        <label htmlFor="date" className='labelStyles'> Date</label>
+                        <input id='date' required
+                            value={date || ''}
+                            onChange={handleFormChange}
+                            type="date" className='  inputStyles' placeholder='' />
                     </div>
 
-                    <button className='formBtn' type='submit' > Search</button>
+                    <div>
+                        <button className='formBtn' type='submit' > Search</button>
+                        <button className='formBtn bg-red-600' type='submit' onClick={handleClear} > Clear</button>
+                    </div>
                 </form>
 
 

@@ -6,6 +6,7 @@ import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Login from './pages/Login.jsx'
 import Register from './pages/Register.jsx'
 import Navbar from './components/Navbar.jsx'
+import Toast from './components/Toast.jsx'
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -13,16 +14,14 @@ function App() {
 
   console.log("in app")
 
-  const Layout = () => (<>
-    <Navbar />
-    <div className='m-5 flex flex-col justify-center items-center'>
-      <Outlet />
-    </div>
-  </>)
+  // const Layout = () => (<>
+  //   <Navbar />
+
+  // </>)
 
   const routes = createBrowserRouter([
     {
-      path: '/', element: <Layout />,
+      path: '/', element: <Navbar />,
       children: [
         { path: '/', element: <Home /> },
         { path: '/login', element: <Login /> },
@@ -33,6 +32,7 @@ function App() {
   return (
     <>
       <RouterProvider router={routes} />
+      {/* <Toast msg={"Hi there!!"}></Toast> */}
 
     </>
 
