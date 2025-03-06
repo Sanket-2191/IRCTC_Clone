@@ -76,7 +76,7 @@ const Register = () => {
                         onChange={handleFormChange}
                         required
                         placeholder="name lastName"
-                        className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
+                        className=" !border-t-blue-gray-200 focus:!border-t-gray-900 bg-white "
                         labelProps={{
                             className: "before:content-none after:content-none",
                         }}
@@ -91,7 +91,7 @@ const Register = () => {
                         value={email}
                         onChange={handleFormChange}
                         placeholder="name@mail.com"
-                        className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
+                        className=" !border-t-blue-gray-200 focus:!border-t-gray-900 bg-white"
                         labelProps={{
                             className: "before:content-none after:content-none",
                         }}
@@ -107,7 +107,7 @@ const Register = () => {
                         value={password}
                         onChange={handleFormChange}
                         placeholder="********"
-                        className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
+                        className=" !border-t-blue-gray-200 focus:!border-t-gray-900 bg-white"
                         labelProps={{
                             className: "before:content-none after:content-none",
                         }}
@@ -137,7 +137,7 @@ const Register = () => {
                 </Button>
                 <Typography color="gray" className="mt-4 text-center font-normal">
                     Already have an account?{" "}
-                    <a href="#" className="font-medium text-gray-900">
+                    <a href="/login" className="font-medium text-gray-900">
                         Sign In
                     </a>
                 </Typography>

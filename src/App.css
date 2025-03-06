@@ -64,12 +64,9 @@
 .formBtn{
   border-radius: 8px;
   margin-top: 10px;
-  margin-left: 3px;
+  margin-left: 5px;
   border: 1px solid ;
   padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
   background-color:  white ;
   color: rgb(14, 14, 14);
   border-color: #070708;

@@ -43,34 +43,28 @@ text-white mb-5 `}>
                     <div className='flex justify-center items-center h-[100%] w-[20%] font-extrabold size-20 '> IRCTC &nbsp;
                         <FontAwesomeIcon icon={faTrain} size="lg" style={{ color: "#d8e6fd" }} />
                     </div>
-                    <div className='w-fit  flex justify-around ' >
+                    <div className='w-fit  flex justify-around mr-5' >
+
+
+                        <NavLink to='/' className={({ isActive }) => ` ${isActive ? styles.activeStyle : ""} formBtn`}>
+                            Home
+                        </NavLink>
 
                         {!loggedIn ? (<>
-                            <div>
-                                <NavLink to='/login' className={({ isActive }) => ` ${isActive ? styles.activeStyle : ""} formBtn`}>
-                                    Login
-                                </NavLink>
+                            <NavLink to='/login' className={({ isActive }) => ` ${isActive ? styles.activeStyle : ""} formBtn`}>
+                                Login
+                            </NavLink>
 
-                            </div>
-                            <div>
-
-                                <NavLink to='/signup' className={({ isActive }) => ` ${isActive ? styles.activeStyle : ""} formBtn`}>
-                                    Signup
-                                </NavLink>
-                            </div>
-                        </>) : <div>
+                            <NavLink to='/signup' className={({ isActive }) => ` ${isActive ? styles.activeStyle : ""} formBtn`}>
+                                Signup
+                            </NavLink>
+                        </>) :
 
                             <button className=' formBtn'
                                 onClick={() => setConfVis(true)}>
                                 LogOut
-                            </button>
-                        </div>}
-                        <div>
+                            </button>}
 
-                            <NavLink to='/' className={({ isActive }) => ` ${isActive ? styles.activeStyle : ""} formBtn`}>
-                                Home
-                            </NavLink>
-                        </div>
 
                     </div>
                 </div >
